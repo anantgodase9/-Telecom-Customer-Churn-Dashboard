@@ -107,11 +107,11 @@ div[data-testid="stProgress"] > div > div {
 """, unsafe_allow_html=True)
 
 # ---------------- LOAD MODEL ----------------
-with open('model/feature_names.json') as f:
+with open('../model/feature_names.json') as f:
     feature_names = json.load(f)
 
 model = xgb.Booster()
-model.load_model('model/churn_model.json')
+model.load_model('../model/churn_model.json')
 
 # ---------------- TITLE ----------------
 st.markdown(
